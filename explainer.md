@@ -1122,16 +1122,16 @@ dictionary XRFrameOfReferenceOptions {
 //
 
 [SecureContext, Exposed=Window]
-interface XRVector3 {
-  readonly attribute double x;
-  readonly attribute double y;
-  readonly attribute double z;
+interface XRPointReadOnly {
+  readonly attribute unrestricted double x;
+  readonly attribute unrestricted double y;
+  readonly attribute unrestricted double z;
 };
 
 [SecureContext, Exposed=Window]
 interface XRRay {
-  readonly attribute XRVector3 origin;
-  readonly attribute XRVector3 direction;
+  readonly attribute XRPointReadOnly origin;
+  readonly attribute XRPointReadOnly direction;
   readonly attribute Float32Array transformMatrix;
 };
 
